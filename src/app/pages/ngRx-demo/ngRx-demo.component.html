@@ -1,0 +1,20 @@
+<div>
+  <h2>NgRx Demo</h2>
+  <h3>Add a Person</h3>
+  <div>
+    <input [(ngModel)]="personName">
+    <button (click)="addPerson()">Add</button>
+  </div>
+  <h3>Attendees</h3>
+  <ul *ngFor="let person of people">
+    <li>
+      <div>Name  : {{person.name}}</div>
+      <div>
+        <span>Guests: {{person.guests}}</span>
+        <button class="action-button" (click)="addGuest(person)">+</button>
+        <button class="action-button" (click)="deleteGuest(person)">-</button>
+        <button class="delete-button" (click)="deletePerson(person)">Delete</button>
+      </div>
+    </li>
+  </ul>
+</div>
