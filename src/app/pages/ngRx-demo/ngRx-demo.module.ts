@@ -12,20 +12,20 @@ import { NgRxDemoComponent } from './ngRx-demo.component';
 import { peopleReducer } from './people.reducer';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    FormsModule,
-    NgRxDemoRoutingModule,
-    StoreModule.provideStore({ people: peopleReducer }),
-    StoreDevtoolsModule.instrumentOnlyWithExtension({
-      maxAge: 100
-    })
-  ],
-  declarations: [
-    NgRxDemoComponent
-  ],
-  exports: [
-    NgRxDemoComponent
-  ]
+	imports: [
+		BrowserModule,
+		FormsModule,
+		NgRxDemoRoutingModule,
+		StoreModule.provideStore({ people: peopleReducer }),
+		StoreDevtoolsModule.instrumentOnlyWithExtension({
+			maxAge: 100
+		})
+	],
+	declarations: [
+		NgRxDemoComponent
+	],
+	exports: [
+		NgRxDemoComponent
+	]
 })
 export class NgRxDemoModule {}
